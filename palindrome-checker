@@ -1,0 +1,14 @@
+function palindromeChecker(str) {
+  // should a string contain any non-alphanumerics, remove them with the regexCheck
+ let regexCheck = /[^A-Za-z0-9]/g;
+ str = str.toLowerCase().replace(regexCheck, '');
+ let len = str.length;
+ for (let i = 0; i < len / 2; i++) {
+   // validating each "opposite end" of the string being tested
+   if (str[i] !== str[len - 1 - i]) {
+       return false;
+   }
+ }
+ return true;
+}
+console.log(palindromeChecker("A man, a plan, a canal. Panama"));
