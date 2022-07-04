@@ -1,0 +1,6 @@
+function phoneNumberValidation(input_str) {
+  let validCheck = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+  return re.test(validCheck) ? "valid" : "invalid";
+}
+
+console.log(phoneNumberValidation("444-444-4444"));
